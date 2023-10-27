@@ -8,6 +8,8 @@ pipeline {
       steps {
         git branch: 'main', url: 'https://github.com/Gadilasruthilaya/learn_jenkins.git'
         sh 'cd javacode'
+        sh 'ls'
+        sh 'mvn --version'
         sh 'javac hello_world.java'
         sh 'mvn --version'
         sh 'hello world java program executed'
