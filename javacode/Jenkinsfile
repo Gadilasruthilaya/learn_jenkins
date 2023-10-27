@@ -6,7 +6,10 @@ pipeline {
         docker { image 'maven:3.8.1-adoptopenjdk-11' }
       }
       steps {
+        git branch: 'main', url: 'https://github.com/Gadilasruthilaya/learn_jenkins.git/javacode'
+        sh 'javac hello_world.java'
         sh 'mvn --version'
+        sh 'hello world java program executed'
       }
     }
     stage('Front-end') {
@@ -14,7 +17,10 @@ pipeline {
         docker { image 'node:16-alpine' }
       }
       steps {
+        git branch: 'main', url: 'https://github.com/Gadilasruthilaya/learn_jenkins.git/javacode'
+        sh 'node app.js'
         sh 'node --version'
+        sh 'node program executed successfully'
       }
     }
   }
