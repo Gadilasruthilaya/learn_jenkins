@@ -12,9 +12,7 @@ pipeline {
         sh 'node program executed successfully'
       }
     }
-  }
 }
-
   stages {
     stage('Back-end') {
       agent {
@@ -29,4 +27,5 @@ pipeline {
         sh 'hello world java program executed'
       }
     }
-    
+  } 
+}
